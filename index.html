@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcard Learning App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="app-container">
+        <header class="header">
+            <div class="logo">📚 FlashLearn</div>
+            <span class="tagline">Learn something new every day</span>
+        </header>
+
+        <section class="intro">
+            <p class="eyebrow">YOUR LEARNING SPACE</p>
+            <h1>Test Your Knowledge</h1>
+            <p>Flip each card to reveal the answer.</p>
+        </section>
+
+        <section class="progress-section">
+            <div class="progress-info">
+                <span>Learning Progress</span>
+                <span id="progressText">Card 1 of 10</span>
+            </div>
+            <div class="progress-track">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </section>
+
+        <section class="flashcard-area">
+            <div class="flashcard" id="flashcard" tabindex="0" role="button" aria-label="Flashcard. Click to reveal the answer." aria-pressed="false">
+                <div class="flashcard-inner" id="flashcardInner">
+                    <div class="flashcard-face flashcard-front">
+                        <span class="card-label">QUESTION</span>
+                        <div class="card-icon" id="questionIcon">💻</div>
+                        <h2 id="questionText">What does HTML stand for?</h2>
+                        <p class="flip-hint">↻ Click to reveal answer</p>
+                    </div>
+                    <div class="flashcard-face flashcard-back">
+                        <span class="card-label">ANSWER</span>
+                        <div class="card-icon">💡</div>
+                        <h2 id="answerTitle">The Answer</h2>
+                        <p id="answerText">HyperText Markup Language</p>
+                        <p class="flip-hint">↻ Click to see question</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <p class="instruction">Click the card to flip it and reveal the answer.</p>
+
+        <nav class="navigation">
+            <button type="button" id="prevBtn" class="nav-btn secondary">← Previous</button>
+            <button type="button" id="nextBtn" class="nav-btn primary">Next →</button>
+        </nav>
+
+        <div class="keyboard-hint">Explore all 10 cards at your own pace</div>
+
+        <footer>Made with HTML, CSS & JavaScript</footer>
+    </main>
+</body>
+</html>
